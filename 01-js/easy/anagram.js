@@ -5,6 +5,11 @@
 */
 
 function isAnagram(str1, str2) {
+  // Remove whitespace and convert to lowercase for case-insensitive comparison
+  const normalize = (str) =>
+    str.replace(/\s/g, '').toLowerCase().split('').sort().join('');
+
+return normalize(str1) === normalize(str2);
 
 }
 
