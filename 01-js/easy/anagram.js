@@ -23,4 +23,5 @@ replace(/\s/g, '') removes all whitespace.
 toLowerCase() makes the comparison case-insensitive.
 
 split('').sort().join('') rearranges the characters in sorted order, so we can directly compare.
+
 */
