@@ -9,3 +9,4 @@ function isPalindrome(str) {
 
 module.exports = isPalindrome;
 //update...
+// Excited for what's next! College is officialy over, and I'm ready to take on new challenges.
