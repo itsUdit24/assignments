@@ -10,3 +10,4 @@ function isPalindrome(str) {
 module.exports = isPalindrome;
 
 // Excited for what's next! College is officialy over, and I'm ready to take on new challenges.
+// Studying JS now heavily, For some couple of days like 10.
