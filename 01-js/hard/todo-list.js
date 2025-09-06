@@ -10,8 +10,51 @@
   Once you've implemented the logic, test your code by running.
 */
 
+/* 
 class Todo {
 
+}
+
+module.exports = Todo;
+*/
+class Todo {
+  constructor() {
+    this.todos = [];
+  }
+
+  add(todo) {
+    this.todos.push(todo);
+  }
+
+  remove(index) {
+    if (index < 0 || index >= this.todos.length) {
+      return null;  // instead of throwing error
+    }
+    return this.todos.splice(index, 1)[0];
+  }
+
+  update(index, updatedTodo) {
+    if (index < 0 || index >= this.todos.length) {
+      return null;  // instead of throwing error
+    }
+    this.todos[index] = updatedTodo;
+    return this.todos[index];
+  }
+
+  getAll() {
+    return this.todos;
+  }
+
+  get(index) {
+    if (index < 0 || index >= this.todos.length) {
+      return null;  // instead of throwing error
+    }
+    return this.todos[index];
+  }
+
+  clear() {
+    this.todos = [];
+  }
 }
 
 module.exports = Todo;
