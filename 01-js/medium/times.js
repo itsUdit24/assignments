@@ -37,3 +37,6 @@ function calculateTime(n) {
   return `${endTime - startTime} milliseconds`;
 
 }
+console.log("Time for n=100:", calculateTime(100), "seconds");
+console.log("Time for n=100000:", calculateTime(100000), "seconds");
+console.log("Time for n=1000000000:", calculateTime(1000000000), "seconds");

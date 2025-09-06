@@ -16,6 +16,75 @@
   Once you've implemented the logic, test your code by running
 */
 
-class Calculator {}
+//class Calculator {}
+
+//module.exports = Calculator;
+
+class Calculator {
+  constructor() {
+    this.result = 0;
+  }
+
+  add(num) {
+    if (typeof num !== "number" || isNaN(num)) {
+      throw new Error("Invalid number");
+    }
+    this.result += num;
+  }
+
+  subtract(num) {
+    if (typeof num !== "number" || isNaN(num)) {
+      throw new Error("Invalid number");
+    }
+    this.result -= num;
+  }
+
+  multiply(num) {
+    if (typeof num !== "number" || isNaN(num)) {
+      throw new Error("Invalid number");
+    }
+    this.result *= num;
+  }
+
+  divide(num) {
+    if (typeof num !== "number" || isNaN(num) || num === 0) {
+      throw new Error("Invalid number");
+    }
+    this.result /= num;
+  }
+
+  clear() {
+    this.result = 0;
+  }
+
+  getResult() {
+    return this.result;
+  }
+
+  calculate(expression) {
+    // Remove extra spaces
+    const cleanedExpression = expression.replace(/\s+/g, "");
+
+    // Check for invalid characters (allow only numbers, operators, parentheses)
+    if (!/^[0-9+\-*/().]+$/.test(cleanedExpression)) {
+      throw new Error("Invalid expression");
+    }
+
+    try {
+      // Safer than direct eval: new Function
+      this.result = Function(`"use strict"; return (${cleanedExpression})`)();
+    } catch (e) {
+      throw new Error("Invalid expression");
+    }
+
+    if (!isFinite(this.result)) {
+      throw new Error("Math error");
+    }
+
+    return this.result;
+  }
+}
 
 module.exports = Calculator;
+
+
