@@ -49,10 +49,35 @@ function getSlice(str, start, end) {
   console.log("After slice:", str.slice(start, end));
 }
 getSlice("Hello World", 0, 5);
+/*
+Output:
+Original String: Hello World
+After slice: Hello
+It doesnot include the end index. 
+I can call it directly on string as well like this:
+console.log("Hello World".slice(0, 5));
+output: Hello
+few years back we used to use substr() but now it is deprecated.
+though both slice() and substring() works same but there is a difference.
+slice() can take negative index as well but substring() cannot. 
+For example:
+console.log("Hello World".slice(-5));
+output: World
+console.log("Hello World".substring(-5));
+output: Hello World
+*/
+// Little bit on slice() method and substring() method
+const value = "Hello World";
+console.log(value.slice(2, 5)); // llo
+console.log(value.substring(2, 5)); // llo
+let ans = value.substr(2, 5); // llo W
+console.log(ans); // llo W
+// In slice and substring, the first parameter is the starting index and the second parameter is the ending index (not included).
+// In substr, the first parameter is the starting index and the second parameter is the length of the substring to be extracted.
 
 // substring
 function getSubstring(str, start, end) {
-  console.log("Original String:", str);
+  console.log("Original String:", str); 
   console.log("After substring:", str.substring(start, end));
 }
 getSubstring("Hello World", 0, 5);
