@@ -66,6 +66,30 @@ function forEachExample(arr) {
   });
 }
 forEachExample([1, 2, 3]);
+//Things get tougher from here on. So pay attention.
+const initialArray = [1, 2, 3];
+/*
+for(let i =0; i<initialArray.length; i++){
+console.log(initialArray[i])
+}
+*/
+function logThing(str){
+console.log(str);
+}
+intialArray.forEach(logThing)
+/*
+callback function is a function that is passed as an argument to another function.
+In this case, the function logThing is passed as an argument to the forEach method.
+The forEach method calls the logThing function for each element in the array.
+It is similar to writing 
+logThing(1)
+logThing(2)
+logThing(3)
+output will be: for both cases
+1
+2
+3
+*/
 
 // map()
 function mapExample(arr) {
