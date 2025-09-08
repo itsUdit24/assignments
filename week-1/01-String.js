@@ -171,6 +171,6 @@ toLower("Hello World"); // Original String: Hello World After toLowerCase: hello
 // Documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
 
-// Split and Slice here are the most important one.Rest are pretty much self explanatory and school boy stuff.
+// Split and Slice here are the most important one.Rest are pretty much self explanatory and simple school boy stuff.
 // Play and learn by doing.
 // Happy coding.
